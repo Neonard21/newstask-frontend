@@ -1,0 +1,90 @@
+{"news":  [
+    {
+      "id": 1,
+      "title": "Breaking: AI Revolution in 2025",
+      "text": "AI is transforming industries faster than expected...",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["AI", "Technology"],
+      "likes": 15,
+      "dislike": 10,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "New Discovery in Space Exploration",
+      "text": "Scientists have discovered a new exoplanet...",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["Science", "Space"],
+      "likes": 25,
+      "dislike": 10,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Tech Giants Battle for AI Dominance",
+      "text": "Google, Microsoft, and OpenAI are in a fierce competition...",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["Tech", "AI"],
+      "likes": 10,
+      "dislike": 10,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "title": "New AI Model Released",
+      "text": "A breakthrough AI model was launched today...",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["Technology", "AI"],
+      "likes": 10,
+      "dislikes": 2,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "title": "World Cup Qualifiers Begin",
+      "text": "The latest football matches have kicked off...",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["Sports", "Football"],
+      "likes": 5,
+      "dislikes": 1,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "title": "Breaking News: React is Awesome!",
+      "text": "React continues to gain popularity among developers due to its efficiency and flexibility.",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["React", "JavaScript", "Frontend"],
+      "likes": 10,
+      "dislikes": 2,
+      "view_count": 150,
+      "created_at": "2025-03-10T10:00:00Z"
+    },
+    {
+      "id": 7,
+      "title": "Infinite Scrolling Implemented",
+      "text": "Learn how infinite scrolling can improve user experience by loading data on demand.",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["UX", "Infinite Scroll", "React"],
+      "likes": 20,
+      "dislikes": 1,
+      "view_count": 200,
+      "created_at": "2025-03-11T12:30:00Z"
+    },
+    {
+      "id": 8,
+      "title": "Understanding REST APIs",
+      "text": "A comprehensive guide to REST APIs and how they integrate with modern frontends.",
+      "image": "https://picsum.photos/50/50",
+      "tags": ["API", "REST", "Backend"],
+      "likes": 15,
+      "dislikes": 3,
+      "view_count": 175,
+      "created_at": "2025-03-12T09:15:00Z"
+    }
+  ]}
