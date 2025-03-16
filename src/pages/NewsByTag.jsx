@@ -10,12 +10,10 @@ const NewsByTag = () => {
   useEffect(() => {
     const fetchNewsByTag = async () => {
       try {
-        const response = await fetch("/news.json");
+        const response = await fetch(`http://localhost:8000/news-article/tag/${tag}/`);
         const data = await response.json();
-        const filteredData = data.news.filter((news) =>
-          news.tags.includes(tag)
-        );
-        setNews(filteredData);
+        console.log(data);
+        setNews(data);
         // console.log(filteredData);
       } catch (error) {
         console.error("Error fetching news by tag:", error);
@@ -30,10 +28,10 @@ const NewsByTag = () => {
       {news.map((item, index) => (
         <NewsItem
           key={index}
-          image={item.image}
-          tags={item.tags}
+          image={item.url_to_image}
+          tags={item.tag}
           likes={item.like}
-          text={item.text}
+          text={item.description}
           title={item.title}
           id={item.id}
         />

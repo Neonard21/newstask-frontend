@@ -25,7 +25,7 @@ function NewsDetail() {
       {/* Row with tags on the left and like/dislike buttons on the right */}
       <div className="d-flex justify-content-between align-items-center">
         <div>
-          {article.tags &&
+          {/* {article.tags &&
             article.tags.map((tag, index) => (
               <Link
                 key={index}
@@ -34,7 +34,8 @@ function NewsDetail() {
               >
                 {tag}
               </Link>
-            ))}
+            ))} */}
+            <Link to={`/news/tag/${article.tags}`} className="badge bg-secondary me-1">{article.tags}</Link>
         </div>
         <div>
           <LikeButton

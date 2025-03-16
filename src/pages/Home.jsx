@@ -10,10 +10,11 @@ function Home() {
 
   const loadMoreNews = async () => {
     try {
-      const response = await fetch("/news.json");
+      const response = await fetch("http://localhost:8000/news-article/");
       const data = await response.json();
-
-      setNews((prevNews) => [...prevNews, ...data.news]);
+      console.log(data);
+      
+      setNews((prevNews) => [...prevNews, ...data]);
       setPage(page + 1);
       if (data && data.length > 0) {
         // Append the new items to the current news list.
@@ -54,11 +55,11 @@ function Home() {
       {news.map((item, index) => (
         <NewsItem
           key={index}
-          image={item.image}
-          tags={item.tags}
+          image={item.url_to_image}
+          tags={item.tag}
           likes={item.likes}
           dislikes={item.dislikes}
-          text={item.text}
+          text={item.description}
           title={item.title}
           id={item.id}
           onDelete={handleDeleteNewsItem}

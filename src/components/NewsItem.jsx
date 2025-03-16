@@ -31,7 +31,7 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
             <p className="card-title">{title}</p>
             <p className="card-text">{text ? text : "No content available"}.</p>
             <div onClick={(e) => e.stopPropagation()}>
-              {tags?.map((tag, index) => (
+              {/* {tags?.map((tag, index) => (
                 <Link
                   key={index}
                   to={`/news/tag/${tag}`}
@@ -39,7 +39,8 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
                 >
                   {tag}
                 </Link>
-              ))}
+              ))} */}
+             <Link to={`/news/tag/${tags}`} className="badge bg-secondary me-1">{tags}</Link>
             </div>
           </div>
         </div>
