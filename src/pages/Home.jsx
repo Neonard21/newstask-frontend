@@ -12,7 +12,6 @@ function Home() {
     try {
       const response = await fetch("http://localhost:8000/news-article/");
       const data = await response.json();
-      console.log(data);
       
       setNews((prevNews) => [...prevNews, ...data]);
       setPage(page + 1);
@@ -33,8 +32,19 @@ function Home() {
     loadMoreNews();
   }, []);
 
-  const handleDeleteNewsItem = (id) => {
-    setNews((prevNews) => prevNews.filter((item) => item.id !== id));
+  const handleDeleteNewsItem = async (id) => {
+    let reponse = await fetch(`http://localhost:8000/news-article/detail/${id}/`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": "K62QAXCMAQ0LCniyI3DUP0HQa2ilHOMo",
+      },
+    })
+
+    let response = await reponse.json();
+    // news = news.filter((item) => item.id !== id);
+    setNews((news) => news.filter((item) => item.id !== id));
+    console.log(response);
   };
 
   return (

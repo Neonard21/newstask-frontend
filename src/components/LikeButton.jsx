@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import "./like.css";
 
-const LikeButton = ({ likes, dislikes }) => {
-  const [likeCount, setLikeCount] = useState(likes);
+const LikeButton = ({ likes, dislikes, id }) => {
+  const [likeCount, setLikeCount] = useState(0);
   const [DislikeCount, setDislikeCount] = useState(likes);
   const [activeBtn, setactiveBtn] = useState("none");
 
-  const handleReaction = (reaction) => {
+  const handleReaction = async (reaction) => {
+    const resp = await fetch(`http://localhost:8000/news-article/likes/${id}/`, {
+      'method': 'PUT',
+      'headers': {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': 'K62QAXCMAQ0LCniyI3DUP0HQa2ilHOMo'
+      },
+    });
+    const data = await resp.json();
+    console.log(data);
+    setLikeCount(data.likes);
+
     if (activeBtn === "none") {
       if (reaction === "like") {
         setLikeCount(likeCount + 1);

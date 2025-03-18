@@ -60,7 +60,7 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
         // Wrap the modal in a container that stops propagation of clicks
         <div
           className="modal show d-block"
-          tabIndex="-1"
+          // tabIndex="-1"
           onClick={(e) => e.stopPropagation()}
           style={{
             position: "fixed",
@@ -68,9 +68,17 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
             left: 0,
             width: "100%",
             height: "100%",
-            zIndex: 1000, // ensure modal is on top
           }}
-        >
+          >
+
+          {/* <div
+            className="modal-backdrop show"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowModal(false);
+            }}
+          ></div>  */}
+                 
           <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
@@ -81,6 +89,7 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
                   onClick={(e) => {
                     e.stopPropagation();
                     setShowModal(false);
+                    handleDelete();
                   }}
                 ></button>
               </div>
@@ -115,13 +124,7 @@ function NewsItem({ title, image, text, likes, tags, dislikes, id, onDelete }) {
             </div>
           </div>
           {/* Modal Backdrop */}
-          <div
-            className="modal-backdrop show"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowModal(false);
-            }}
-          ></div>
+          
         </div>
       )}
     </div>
